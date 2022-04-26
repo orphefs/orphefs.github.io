@@ -1,0 +1,58 @@
+[
+  {
+    "key": "structalyse",
+    "title": "Structalyse",
+    "shortDescription": "3-D displacement monitoring for civil assets",
+    "description": "structalyse.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "structalyse.png"
+  },
+  {
+    "key": "roboweldar",
+    "title": "RoboWeldAR",
+    "shortDescription": "Cognitive robotic welding for shipbuilding",
+    "description": "roboweldar.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "roboweldar.gif"
+  },
+  {
+    "key": "efd-lz",
+    "title": "Livelihood zoning",
+    "shortDescription": "Improving humanitarian intervention in Africa via geospatial methods",
+    "description": "Livelihood-zoning.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "livelihood-zoning.png"
+  },
+  {
+    "key": "navenio",
+    "title": "Localization in GPS-denied environments",
+    "shortDescription": "Developing components for the core localization engine of Navenio",
+    "description": "navenio.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "navenio.png"
+  },
+  {
+    "key": "minotaur",
+    "title": "Minotaur-R",
+    "shortDescription": "Computer vision for sorting nuclear decommissioning debris",
+    "description": "minotaur.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "minotaur.gif"
+  },
+  {
+    "key": "barkhausen",
+    "title": "Magnetic spectroscopy for inspection of metal structures",
+    "shortDescription": "Development of a novel method for the non-destructive inspection of ferromagnetic components used in industrial and aerospace applications",
+    "description": "barkhausen.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "barkhausen.png"
+  },
+  {
+    "key": "firegaze",
+    "title": "firegaze.ai",
+    "shortDescription": "Crowdsourced wildfire detection for disaster prevention",
+    "description": "firegaze.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "firegaze.png"
+  }
+]
