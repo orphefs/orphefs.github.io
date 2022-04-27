@@ -1,20 +1,21 @@
 {
   "files": {
     "main.css": "/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/static/js/main.1dd40cae.chunk.js",
-    "main.js.map": "/static/js/main.1dd40cae.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.98439fcd.js",
-    "runtime-main.js.map": "/static/js/runtime-main.98439fcd.js.map",
-    "static/css/2.23154d62.chunk.css": "/static/css/2.23154d62.chunk.css",
-    "static/js/2.ea5df9d6.chunk.js": "/static/js/2.ea5df9d6.chunk.js",
-    "static/js/2.ea5df9d6.chunk.js.map": "/static/js/2.ea5df9d6.chunk.js.map",
-    "static/js/3.70c6f713.chunk.js": "/static/js/3.70c6f713.chunk.js",
-    "static/js/3.70c6f713.chunk.js.map": "/static/js/3.70c6f713.chunk.js.map",
+    "main.js": "/static/js/main.514fba67.chunk.js",
+    "main.js.map": "/static/js/main.514fba67.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.7ad21f09.js",
+    "runtime-main.js.map": "/static/js/runtime-main.7ad21f09.js.map",
+    "static/css/2.3cdf925d.chunk.css": "/static/css/2.3cdf925d.chunk.css",
+    "static/js/2.38db5dab.chunk.js": "/static/js/2.38db5dab.chunk.js",
+    "static/js/2.38db5dab.chunk.js.map": "/static/js/2.38db5dab.chunk.js.map",
+    "static/js/3.15d86e38.chunk.js": "/static/js/3.15d86e38.chunk.js",
+    "static/js/3.15d86e38.chunk.js.map": "/static/js/3.15d86e38.chunk.js.map",
     "index.html": "/index.html",
-    "static/css/2.23154d62.chunk.css.map": "/static/css/2.23154d62.chunk.css.map",
+    "static/css/2.3cdf925d.chunk.css.map": "/static/css/2.3cdf925d.chunk.css.map",
     "static/css/main.6dea0f05.chunk.css.map": "/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.ea5df9d6.chunk.js.LICENSE.txt": "/static/js/2.ea5df9d6.chunk.js.LICENSE.txt",
+    "static/js/2.38db5dab.chunk.js.LICENSE.txt": "/static/js/2.38db5dab.chunk.js.LICENSE.txt",
     "static/media/Livelihood-zoning.md": "/static/media/Livelihood-zoning.68f3726b.md",
+    "static/media/Resume_Orfeas_Kypris_2021.pdf": "/static/media/Resume_Orfeas_Kypris_2021.4d0b2bb3.pdf",
     "static/media/barchart.csv": "/static/media/barchart.d3800cab.csv",
     "static/media/barkhausen.png": "/static/media/barkhausen.6485081e.png",
     "static/media/barkhausen.md": "/static/media/barkhausen.8da20098.md",
@@ -24,7 +25,7 @@
     "static/media/livelihood-zoning.png": "/static/media/livelihood-zoning.f1baff13.png",
     "static/media/minotaur.gif": "/static/media/minotaur.3f467364.gif",
     "static/media/minotaur.md": "/static/media/minotaur.5ed43fd6.md",
-    "static/media/navenio.md": "/static/media/navenio.841c4239.md",
+    "static/media/navenio.md": "/static/media/navenio.82a981d3.md",
     "static/media/navenio.png": "/static/media/navenio.f6b6427b.png",
     "static/media/orf.jpeg": "/static/media/orf.44efe24f.jpeg",
     "static/media/publications.bib": "/static/media/publications.b8f2cfc3.bib",
@@ -34,10 +35,10 @@
     "static/media/structalyse.md": "/static/media/structalyse.df00e269.md"
   },
   "entrypoints": [
-    "static/js/runtime-main.98439fcd.js",
-    "static/css/2.23154d62.chunk.css",
-    "static/js/2.ea5df9d6.chunk.js",
+    "static/js/runtime-main.7ad21f09.js",
+    "static/css/2.3cdf925d.chunk.css",
+    "static/js/2.38db5dab.chunk.js",
     "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.1dd40cae.chunk.js"
+    "static/js/main.514fba67.chunk.js"
   ]
 }
