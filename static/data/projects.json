@@ -5,7 +5,9 @@
     "shortDescription": "3-D displacement monitoring for civil assets",
     "description": "structalyse.md",
     "videoUrl": "http://link.to.video/",
-    "imageUrl": "structalyse.png"
+    "imageUrl": "structalyse.png",
+    "type": "sensors",
+    "hashTags": ["Python", "Matlab", "LabView", "C", "STM32"]
   },
   {
     "key": "roboweldar",
@@ -13,7 +15,9 @@
     "shortDescription": "Cognitive robotic welding for shipbuilding",
     "description": "roboweldar.md",
     "videoUrl": "http://link.to.video/",
-    "imageUrl": "roboweldar.gif"
+    "imageUrl": "roboweldar.gif",
+    "type": "robotics",
+    "hashTags": ["Python", "ROS", "OpenCV", "PyTorch", "Open3D"]
   },
   {
     "key": "efd-lz",
@@ -21,7 +25,9 @@
     "shortDescription": "Improving humanitarian intervention in Africa via geospatial methods",
     "description": "Livelihood-zoning.md",
     "videoUrl": "http://link.to.video/",
-    "imageUrl": "livelihood-zoning.png"
+    "imageUrl": "livelihood-zoning.png",
+    "type": "datascience",
+    "hashTags": ["Python", "geopandas", "pysal", "Azure", "DVC"]
   },
   {
     "key": "navenio",
@@ -29,7 +35,9 @@
     "shortDescription": "Developing components for the core localization engine of Navenio",
     "description": "navenio.md",
     "videoUrl": "http://link.to.video/",
-    "imageUrl": "navenio.png"
+    "imageUrl": "navenio.png",
+    "type": "datascience",
+    "hashTags": ["Python", "C++", "AWS"]
   },
   {
     "key": "minotaur",
@@ -37,15 +45,24 @@
     "shortDescription": "Computer vision for sorting nuclear decommissioning debris",
     "description": "minotaur.md",
     "videoUrl": "http://link.to.video/",
-    "imageUrl": "minotaur.gif"
+    "imageUrl": "minotaur.gif",
+    "type": "robotics",
+    "hashTags": ["Python", "OpenCV", "Tensorflow", "Mask-RCNN"]
   },
   {
     "key": "barkhausen",
-    "title": "Magnetic spectroscopy for inspection of metal structures",
-    "shortDescription": "Development of a novel method for the non-destructive inspection of ferromagnetic components used in industrial and aerospace applications",
+    "title": "Magnetic spectroscopy for non-destructive evaluation",
+    "shortDescription": "Development of a novel method for inspecting components used in aerospace applications",
     "description": "barkhausen.md",
     "videoUrl": "http://link.to.video/",
-    "imageUrl": "barkhausen.png"
+    "imageUrl": "barkhausen.png",
+    "type": "sensors",
+    "hashTags": [
+      "Matlab",
+      "Labview",
+      "Physical measurement",
+      "Mathematical modeling"
+    ]
   },
   {
     "key": "firegaze",
@@ -53,6 +70,28 @@
     "shortDescription": "Crowdsourced wildfire detection for disaster prevention",
     "description": "firegaze.md",
     "videoUrl": "http://link.to.video/",
-    "imageUrl": "firegaze.png"
+    "imageUrl": "firegaze.png",
+    "type": "sensors",
+    "hashTags": ["Python", "YOLOv5", "PyTorch", "Streamlit"]
+  },
+  {
+    "key": "mood-app",
+    "title": "Mood Recording App",
+    "shortDescription": "Interface for recording moods throughout the day",
+    "description": "https://raw.githubusercontent.com/orphefs/mood-recording-app/main/README.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "https://raw.githubusercontent.com/orphefs/mood-recording-app/d502365ea5a7c67c289775cc9828ad3a572a2fb9/assets/app_workflow.gif",
+    "type": "frontend",
+    "hashTags": ["React Native", "Javascript"]
+  },
+  {
+    "key": "rolling-statistics",
+    "title": "Rolling Statistics",
+    "shortDescription": "An algorithm for the rolling mean and variance of a discrete time series useful for real-time applications",
+    "description": "https://raw.githubusercontent.com/orphefs/rolling_statistics/master/README.md",
+    "videoUrl": "http://link.to.video/",
+    "imageUrl": "rolling-statistics.png",
+    "type": "sensors",
+    "hashTags": ["Python", "C++"]
   }
 ]
