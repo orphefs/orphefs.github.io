@@ -6,7 +6,7 @@ const DOMAINS = ["all", "ML Platform", "EM / FEM", "Computer Vision", "Geospatia
 function Card({ p }: { p: Project }) {
   const [open, setOpen] = useState(false);
   return (
-    <article className="proj-card">
+    <article className="proj-card" id={`proj-${p.key}`}>
       <div className="proj-thumb">
         <span className="domain-tag">{p.domain}</span>
         <img src={p.image} alt={p.title} loading="lazy" />

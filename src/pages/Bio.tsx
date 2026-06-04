@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { profile, stack } from "../data/profile";
 import { publications, patents, timeline, education } from "../data/research";
 import PlatformSummary from "../components/PlatformSummary";
@@ -51,7 +52,7 @@ export default function Bio() {
               .
             </p>
             <p>
-              What I bring to that work is a <span className="cyan">physics and computational-modeling
+              What I bring to that work is a <span className="cyan">physics and computational modeling
               foundation</span>. My earlier career was in research: during my PhD I built physics-based
               models of magnetic Barkhausen noise and ran finite-element simulations in{" "}
               <a href="https://www.comsol.com/" target="_blank" rel="noreferrer">
@@ -73,11 +74,21 @@ export default function Bio() {
               . I no longer work in
               electromagnetics day-to-day, but that grounding in first-principles physics, numerical
               modeling, and signal processing is the lens I still bring to hard engineering problems.
+              In my free time, I work on{" "}
+              <Link to="/projects#proj-jax-fem-magnetostatics">
+                inverse problems in electromagnetism
+              </Link>{" "}
+              using modern computational tools.
             </p>
             <p>
-              Along the way I've co-authored <span className="amber">two patents</span>, published in
-              top-tier IEEE venues, led engineering teams, and shipped production software for indoor
-              localization, robotic welding, computer vision, and geospatial ML. I gravitate toward
+              Along the way I've co-authored{" "}
+              <a href="#patents">two patents</a>,{" "}
+              <a href="#publications">published in top-tier IEEE venues</a>, led engineering teams,
+              and shipped production software for{" "}
+              <Link to="/projects#proj-navenio">indoor localization</Link>,{" "}
+              <Link to="/projects#proj-roboweldar">robotic welding</Link>,{" "}
+              <Link to="/projects#proj-minotaur">computer vision</Link>, and{" "}
+              <Link to="/projects#proj-efd-lz">geospatial ML</Link>. I gravitate toward
               research-grade problems with real social and environmental impact.
             </p>
           </div>
@@ -181,7 +192,7 @@ export default function Bio() {
               <p>
                 My doctoral advisor,{" "}
                 <a
-                  href="https://www.ece.iastate.edu/profiles/david-c-jiles/"
+                  href="https://www.engineering.iastate.edu/people/profile/dcjiles/"
                   target="_blank"
                   rel="noreferrer"
                 >
@@ -214,7 +225,7 @@ export default function Bio() {
       </section>
 
       {/* patents */}
-      <section className="section">
+      <section className="section" id="patents">
         <h2>
           <span className="hash">$</span> cat patents.txt <span className="ln">// granted / filed</span>
         </h2>
@@ -236,7 +247,7 @@ export default function Bio() {
       </section>
 
       {/* publications */}
-      <section className="section">
+      <section className="section" id="publications">
         <h2>
           <span className="hash">$</span> cat publications.bib <span className="ln">// selected</span>
         </h2>

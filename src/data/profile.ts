@@ -1,9 +1,9 @@
 export const profile = {
   name: "Orfeas Kypris",
   role: "Senior ML Platform Engineer",
-  subRole: "Physics & computational-modeling background",
+  subRole: "Physics & computational modeling background",
   tagline:
-    "I build and productionize machine-learning platforms. My approach is grounded in a physics and computational-modeling background — numerical simulation, signal processing, and first-principles thinking I draw on to reason about hard problems.",
+    "I build and productionize machine-learning platforms. My approach is grounded in a physics and computational modeling background — numerical simulation, signal processing, and first-principles thinking I draw on to reason about hard problems.",
   location: "Athens, Greece",
   // Email kept split into parts so the full address never appears as a literal
   // in source or the built bundle. Assemble at runtime with getEmail().

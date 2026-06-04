@@ -100,7 +100,7 @@ export const education: Education[] = [
     years: "2011 – 2015",
     advisor: {
       name: "Prof. David C. Jiles",
-      url: "https://www.ece.iastate.edu/profiles/david-c-jiles/",
+      url: "https://www.engineering.iastate.edu/people/profile/dcjiles/",
     },
   },
   {

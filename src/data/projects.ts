@@ -14,6 +14,33 @@ export type Project = {
 // Curated and reframed toward "ML Platform Engineer + EM/FEM simulation".
 export const projects: Project[] = [
   {
+    key: "jax-fem-magnetostatics",
+    title: "JAX-FEM Magnetostatics Inverse Engineering",
+    blurb:
+      "A fully differentiable 2D magnetostatic finite-element solver in JAX that recovers a spatially varying material-permeability field from a measured multi-coil mutual-inductance matrix.",
+    body: [
+      "A differentiable physics project built on JAX and jax-fem. The forward model is a 2D magnetostatic finite-element solver: for an array of four air-core coils sitting just above a ferromagnetic specimen, it solves the magnetic vector-potential PDE and returns the array's 4×4 mutual-inductance matrix. The inverse problem runs that pipeline backwards — recovering the specimen's spatially varying relative permeability field purely from the measured inductances.",
+      "Forward formulation: the weak form ∫ ν ∇A_z·∇v dΩ = ∫ J_z v dΩ is solved for the out-of-plane vector potential A_z, where ν = 1/(μ₀·μ_r) is the reluctivity field. Each coil is modeled as two rectangular ±J current blocks forming a dipole loop, on a QUAD4 mesh at ~200 µm resolution over a 108×32 mm domain with homogeneous Dirichlet boundaries. Mutual inductances come from the energy method, M_ij = (∫ A_z^(j)·J_z^(i) dΩ)/(I_i·I_j), evaluated at quadrature points. Everything runs in 64-bit JAX on a PETSc/MPI backend in the quasi-magnetostatic regime.",
+      "The inverse solve is end-to-end differentiable: gradients flow through the linear solve via the adjoint method (jax-fem's ad_wrapper). I parameterize permeability in log-space to keep it positive and optimize with L-BFGS-B under multiple random restarts to avoid local minima.",
+      "The interesting part is conditioning the loss. The strong self-inductance terms dominate the off-diagonal mutual terms by ~80× in magnitude — and therefore by ~6400× in the loss gradient — yet the off-diagonals carry the most information, since they probe long, low-spatial-frequency flux paths through the specimen. I normalize each residual by the Jacobian row norm σ_m = ‖J[m,:]‖ so every measurement contributes equally. Because the PDE is linear in ν, the Jacobian dM/d(log μ) is essentially constant across the parameter range, so σ is computed once at a nominal operating point rather than every iteration.",
+    ],
+    image: "/images/jax-fem-magnetostatics.png",
+    domain: "EM / FEM",
+    period: "Personal · 2026",
+    org: "Independent",
+    tags: [
+      "JAX",
+      "jax-fem",
+      "Automatic Differentiation",
+      "FEM",
+      "Magnetostatics",
+      "L-BFGS-B",
+      "Inverse Problems",
+      "PETSc",
+    ],
+    links: [{ label: "Built on JAX-FEM", url: "https://github.com/deepmodeling/jax-fem" }],
+  },
+  {
     key: "umg-ml-serving-api",
     title: "Enterprise ML Serving API Platform",
     blurb:
@@ -92,33 +119,6 @@ export const projects: Project[] = [
     org: "Universal Music Group",
     tags: ["C++", "Python", "Docker", "Kubernetes", "API Design", "CI/CD", "Terraform"],
     links: [{ label: "Sollos", url: "https://findsollos.com/" }],
-  },
-  {
-    key: "jax-fem-magnetostatics",
-    title: "JAX-FEM Magnetostatics Inverse Engineering",
-    blurb:
-      "A fully differentiable 2D magnetostatic finite-element solver in JAX that recovers a spatially varying material-permeability field from a measured multi-coil mutual-inductance matrix.",
-    body: [
-      "A differentiable physics project built on JAX and jax-fem. The forward model is a 2D magnetostatic finite-element solver: for an array of four air-core coils sitting just above a ferromagnetic specimen, it solves the magnetic vector-potential PDE and returns the array's 4×4 mutual-inductance matrix. The inverse problem runs that pipeline backwards — recovering the specimen's spatially varying relative permeability field purely from the measured inductances.",
-      "Forward formulation: the weak form ∫ ν ∇A_z·∇v dΩ = ∫ J_z v dΩ is solved for the out-of-plane vector potential A_z, where ν = 1/(μ₀·μ_r) is the reluctivity field. Each coil is modeled as two rectangular ±J current blocks forming a dipole loop, on a QUAD4 mesh at ~200 µm resolution over a 108×32 mm domain with homogeneous Dirichlet boundaries. Mutual inductances come from the energy method, M_ij = (∫ A_z^(j)·J_z^(i) dΩ)/(I_i·I_j), evaluated at quadrature points. Everything runs in 64-bit JAX on a PETSc/MPI backend in the quasi-magnetostatic regime.",
-      "The inverse solve is end-to-end differentiable: gradients flow through the linear solve via the adjoint method (jax-fem's ad_wrapper). I parameterize permeability in log-space to keep it positive and optimize with L-BFGS-B under multiple random restarts to avoid local minima.",
-      "The interesting part is conditioning the loss. The strong self-inductance terms dominate the off-diagonal mutual terms by ~80× in magnitude — and therefore by ~6400× in the loss gradient — yet the off-diagonals carry the most information, since they probe long, low-spatial-frequency flux paths through the specimen. I normalize each residual by the Jacobian row norm σ_m = ‖J[m,:]‖ so every measurement contributes equally. Because the PDE is linear in ν, the Jacobian dM/d(log μ) is essentially constant across the parameter range, so σ is computed once at a nominal operating point rather than every iteration.",
-    ],
-    image: "/images/jax-fem-magnetostatics.png",
-    domain: "EM / FEM",
-    period: "Personal · 2026",
-    org: "Independent",
-    tags: [
-      "JAX",
-      "jax-fem",
-      "Automatic Differentiation",
-      "FEM",
-      "Magnetostatics",
-      "L-BFGS-B",
-      "Inverse Problems",
-      "PETSc",
-    ],
-    links: [{ label: "Built on JAX-FEM", url: "https://github.com/deepmodeling/jax-fem" }],
   },
   {
     key: "barkhausen",
