@@ -105,21 +105,25 @@ export default function StackSection() {
       });
     };
 
-    // Trigger on first pointer focus OR first time the section scrolls into view.
-    const onEnter = () => play();
-    root.addEventListener("pointerenter", onEnter);
+    // Only play once the section has actually been scrolled up into view —
+    // i.e. its top crosses into the upper part of the viewport. This avoids
+    // firing on initial load when the section sits low in a tall viewport.
+    const maybePlay = () => {
+      if (played.current) return;
+      const r = root.getBoundingClientRect();
+      const vh = window.innerHeight || document.documentElement.clientHeight;
+      if (r.top < vh * 0.55 && r.bottom > vh * 0.15) play();
+    };
 
-    const io = new IntersectionObserver(
-      (entries) => {
-        if (entries.some((e) => e.isIntersecting)) play();
-      },
-      { threshold: 0.35 }
-    );
-    io.observe(root);
+    window.addEventListener("scroll", maybePlay, { passive: true });
+    window.addEventListener("resize", maybePlay);
+    // Deferred initial check (covers deep-links that land directly on the section).
+    const rafId = window.requestAnimationFrame(maybePlay);
 
     return () => {
-      root.removeEventListener("pointerenter", onEnter);
-      io.disconnect();
+      window.cancelAnimationFrame(rafId);
+      window.removeEventListener("scroll", maybePlay);
+      window.removeEventListener("resize", maybePlay);
     };
   }, []);
 
