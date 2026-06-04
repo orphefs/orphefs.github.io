@@ -71,6 +71,12 @@ export default function Contact() {
           </a>
         ))}
       </div>
+
+      <p className="comment" style={{ marginTop: 28, fontSize: 12 }}>
+        privacy: with your consent, this site uses Google Analytics and Microsoft Clarity to
+        measure aggregate traffic, approximate location, and anonymized interaction/heatmap data.
+        No personal data is sold; you can decline via the cookie banner.
+      </p>
     </>
   );
 }
