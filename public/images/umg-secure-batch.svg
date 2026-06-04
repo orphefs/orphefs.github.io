@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" font-family="monospace">
+  <rect width="320" height="180" fill="#060906"/>
+  <g stroke="#13301a" stroke-width="1">
+    <path d="M0 45h320M0 90h320M0 135h320M80 0v180M160 0v180M240 0v180"/>
+  </g>
+  <text x="16" y="26" fill="#50604f" font-size="9">// umg · secure multi-tenant batch</text>
+  <!-- shield -->
+  <path d="M60 50l28 10v22c0 18-14 28-28 34-14-6-28-16-28-34V60z"
+        fill="#0f150f" stroke="#39ff14" stroke-width="1.6"/>
+  <path d="M50 84l8 8 14-16" stroke="#39ff14" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- isolated tenant namespaces -->
+  <g font-size="8">
+    <rect x="150" y="52" width="150" height="22" rx="4" fill="#0f150f" stroke="#2f4a4a" stroke-dasharray="3 3"/>
+    <text x="158" y="66" fill="#36e0d0">ns: tenant-a</text>
+    <rect x="150" y="80" width="150" height="22" rx="4" fill="#0f150f" stroke="#2f4a4a" stroke-dasharray="3 3"/>
+    <text x="158" y="94" fill="#36e0d0">ns: tenant-b</text>
+    <rect x="150" y="108" width="150" height="22" rx="4" fill="#0f150f" stroke="#2f4a4a" stroke-dasharray="3 3"/>
+    <text x="158" y="122" fill="#36e0d0">ns: vendor-x</text>
+  </g>
+  <text x="16" y="160" fill="#50604f" font-size="8">network policies · S3 streaming &gt;10GB · isolation</text>
+</svg>

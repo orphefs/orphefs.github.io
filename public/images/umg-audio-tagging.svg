@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" font-family="monospace">
+  <rect width="320" height="180" fill="#060906"/>
+  <g stroke="#13301a" stroke-width="1">
+    <path d="M0 45h320M0 90h320M0 135h320M80 0v180M160 0v180M240 0v180"/>
+  </g>
+  <text x="16" y="26" fill="#50604f" font-size="9">// umg · unified audio tagging</text>
+  <!-- waveform -->
+  <g stroke="#39ff14" stroke-width="2" stroke-linecap="round">
+    <line x1="20" y1="80" x2="20" y2="96"/>
+    <line x1="30" y1="68" x2="30" y2="108"/>
+    <line x1="40" y1="58" x2="40" y2="118"/>
+    <line x1="50" y1="74" x2="50" y2="102"/>
+    <line x1="60" y1="50" x2="60" y2="126"/>
+    <line x1="70" y1="70" x2="70" y2="106"/>
+    <line x1="80" y1="62" x2="80" y2="114"/>
+    <line x1="90" y1="78" x2="90" y2="98"/>
+    <line x1="100" y1="54" x2="100" y2="122"/>
+    <line x1="110" y1="72" x2="110" y2="104"/>
+    <line x1="120" y1="64" x2="120" y2="112"/>
+    <line x1="130" y1="76" x2="130" y2="100"/>
+  </g>
+  <!-- arrow to tags -->
+  <path d="M142 88h22" stroke="#2bbf10" stroke-width="1.4" fill="none" marker-end="url(#c)"/>
+  <!-- tag chips -->
+  <g font-size="8">
+    <rect x="170" y="52" width="60" height="15" rx="7" fill="#0f150f" stroke="#36e0d0"/>
+    <text x="178" y="63" fill="#36e0d0">genre</text>
+    <rect x="170" y="72" width="74" height="15" rx="7" fill="#0f150f" stroke="#39ff14"/>
+    <text x="178" y="83" fill="#39ff14">tempo·bpm</text>
+    <rect x="170" y="92" width="66" height="15" rx="7" fill="#0f150f" stroke="#2f4a2f"/>
+    <text x="178" y="103" fill="#c8d6c8">mood</text>
+    <rect x="170" y="112" width="80" height="15" rx="7" fill="#0f150f" stroke="#2f4a2f"/>
+    <text x="178" y="123" fill="#c8d6c8">instrument</text>
+  </g>
+  <text x="16" y="160" fill="#50604f" font-size="8">unified classifier · higher throughput · lower cost</text>
+  <defs>
+    <marker id="c" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0 0l6 3-6 3z" fill="#2bbf10"/>
+    </marker>
+  </defs>
+</svg>

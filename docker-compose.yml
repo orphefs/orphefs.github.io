@@ -1,0 +1,19 @@
+# Local developer mode:  docker compose up
+# Then open http://localhost:5173  (hot reload enabled)
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    container_name: orphefs-site-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      # Bind-mount source for live reload...
+      - .:/app
+      # ...but keep the container's node_modules (don't shadow with host).
+      - /app/node_modules
+    environment:
+      - CHOKIDAR_USEPOLLING=true
+    stdin_open: true
+    tty: true

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 180" font-family="monospace">
+  <rect width="320" height="180" fill="#060906"/>
+  <g stroke="#13301a" stroke-width="1">
+    <path d="M0 45h320M0 90h320M0 135h320M80 0v180M160 0v180M240 0v180"/>
+  </g>
+  <text x="16" y="26" fill="#50604f" font-size="9">// umg · airflow orchestration DAG</text>
+  <!-- edges -->
+  <g stroke="#2bbf10" stroke-width="1.4" fill="none" marker-end="url(#b)">
+    <path d="M58 90h34"/>
+    <path d="M122 90c12 0 12 -34 24 -34"/>
+    <path d="M122 90c12 0 12 34 24 34"/>
+    <path d="M176 56c12 0 12 34 24 34"/>
+    <path d="M176 124c12 0 12 -34 24 -34"/>
+    <path d="M230 90h34"/>
+  </g>
+  <!-- nodes -->
+  <g font-size="8" text-anchor="middle">
+    <circle cx="44" cy="90" r="14" fill="#0f150f" stroke="#39ff14" stroke-width="1.6"/>
+    <text x="44" y="93" fill="#39ff14">src</text>
+    <circle cx="108" cy="90" r="14" fill="#0f150f" stroke="#36e0d0" stroke-width="1.4"/>
+    <text x="108" y="93" fill="#36e0d0">split</text>
+    <circle cx="162" cy="56" r="14" fill="#0f150f" stroke="#2f4a2f" stroke-width="1.4"/>
+    <text x="162" y="59" fill="#c8d6c8">m1</text>
+    <circle cx="162" cy="124" r="14" fill="#0f150f" stroke="#2f4a2f" stroke-width="1.4"/>
+    <text x="162" y="127" fill="#c8d6c8">m2</text>
+    <circle cx="216" cy="90" r="14" fill="#0f150f" stroke="#36e0d0" stroke-width="1.4"/>
+    <text x="216" y="93" fill="#36e0d0">join</text>
+    <circle cx="280" cy="90" r="14" fill="#0f150f" stroke="#39ff14" stroke-width="1.6"/>
+    <text x="280" y="93" fill="#39ff14">sink</text>
+  </g>
+  <text x="16" y="162" fill="#50604f" font-size="8">+200% throughput · concurrent DAGs · multi-model</text>
+  <defs>
+    <marker id="b" markerWidth="7" markerHeight="7" refX="5" refY="3" orient="auto">
+      <path d="M0 0l6 3-6 3z" fill="#2bbf10"/>
+    </marker>
+  </defs>
+</svg>
