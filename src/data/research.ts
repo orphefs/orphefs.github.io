@@ -75,9 +75,9 @@ export const patents: Patent[] = [
 ];
 
 export const timeline: { when: string; what: string; where: string; url?: string }[] = [
-  { when: "Now", what: "ML applications (music & audio) — building & productionizing", where: "Universal Music Group", url: "https://www.universalmusic.com/" },
-  { when: "Prev", what: "Research & integration engineer — ML / computer vision", where: "iKnowHow (Innovation)", url: "https://www.iknowhow.com/" },
-  { when: "Prev", what: "Core research team — indoor localization ML", where: "Navenio", url: "https://navenio.com/" },
+  { when: "Now", what: "Senior ML Platform Engineer — building & productionizing music & audio ML", where: "Universal Music Group", url: "https://www.universalmusic.com/" },
+  { when: "Prev", what: "R&D Engineer — ML / computer vision", where: "iKnowHow (Innovation)", url: "https://www.iknowhow.com/" },
+  { when: "Prev", what: "Data Scientist & Systems Developer — indoor localization ML", where: "Navenio", url: "https://navenio.com/" },
   { when: "Postdoc", what: "Magnetic structural-health-monitoring sensors", where: "University of Oxford", url: "https://www.cs.ox.ac.uk/research/cyberphysical/" },
   { when: "PhD", what: "Magnetic Barkhausen NDE — modeling, FEM, sensing", where: "Iowa State University", url: "https://www.ece.iastate.edu/" },
 ];
