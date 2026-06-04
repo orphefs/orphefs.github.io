@@ -376,6 +376,69 @@ section[id],
 }
 .chip:hover { border-color: var(--accent-dim); color: var(--accent); }
 
+/* stack chips carry a leading icon that flies in and is absorbed */
+.stack-row .chip {
+  display: inline-flex;
+  align-items: center;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.chip-ico {
+  width: 14px;
+  height: 14px;
+  margin-right: 6px;
+  flex: 0 0 auto;
+  background-color: var(--accent);
+  -webkit-mask: var(--ico) center / contain no-repeat;
+  mask: var(--ico) center / contain no-repeat;
+  opacity: 0; /* hidden until the flying icon is absorbed */
+}
+.chip-ico.shown { opacity: 1; }
+.chip-ico.absorb { animation: icoPop 0.5s ease; }
+@keyframes icoPop {
+  0% { transform: scale(0.2); }
+  55% { transform: scale(1.35); }
+  100% { transform: scale(1); }
+}
+.chip.absorbed {
+  border-color: var(--accent);
+  box-shadow: 0 0 16px var(--accent-glow);
+}
+.chip.absorbed .chip-ico { background-color: #b6ffaa; }
+
+/* the flying icon + its green afterglow trail (appended to <body>) */
+.fly {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  z-index: 120;
+  pointer-events: none;
+  will-change: transform, opacity;
+}
+.fly-core {
+  position: absolute;
+  inset: 0;
+  background-color: var(--accent);
+  -webkit-mask: var(--ico) center / contain no-repeat;
+  mask: var(--ico) center / contain no-repeat;
+  filter: drop-shadow(0 0 7px var(--accent));
+}
+.fly-tail {
+  position: absolute;
+  left: 50%;
+  bottom: 45%;
+  transform: translateX(-50%);
+  width: 7px;
+  height: 130px;
+  border-radius: 4px;
+  background: linear-gradient(to top, rgba(57, 255, 20, 0.85), rgba(57, 255, 20, 0));
+  filter: blur(2.5px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .fly { display: none; }
+}
+
 /* ---- timeline ---- */
 .timeline { display: grid; gap: 2px; }
 .tl-row {

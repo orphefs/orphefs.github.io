@@ -1,7 +1,8 @@
 import { Link } from "react-router-dom";
-import { profile, stack } from "../data/profile";
+import { profile } from "../data/profile";
 import { publications, patents, timeline, education } from "../data/research";
 import PlatformSummary from "../components/PlatformSummary";
+import StackSection from "../components/StackSection";
 
 export default function Bio() {
   return (
@@ -104,28 +105,8 @@ export default function Bio() {
         <PlatformSummary />
       </section>
 
-      {/* stack */}
-      <section className="section">
-        <h2>
-          <span className="hash">$</span> ls ~/stack <span className="ln">// tools &amp; methods</span>
-        </h2>
-        <div className="window">
-          <div className="window-body stack-grid">
-            {stack.map((g) => (
-              <div className="stack-row" key={g.group}>
-                <div className="label">{g.group}/</div>
-                <div className="chips">
-                  {g.items.map((i) => (
-                    <span className="chip" key={i}>
-                      {i}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* stack — icons fly in and get absorbed into each tag on first focus */}
+      <StackSection />
 
       {/* timeline */}
       <section className="section">
